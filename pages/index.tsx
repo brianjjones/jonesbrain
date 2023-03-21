@@ -1,30 +1,36 @@
-// import Head from 'next/head'
-// import Image from 'next/image'
-// import { Inter } from 'next/font/google'
-// import NavBar from './navbar'
-import styles from '@/styles/Home.module.css'
+// import styles from '@/styles/Home.module.css'
+import React, { FC, ReactNode, ReactPropTypes } from 'react';
+import styles from '@/styles/Index.module.css'
+import PartScanner from './partscanner'
 
-// import type { ReactElement } from 'react'
-// import Layout from '../components/layout'
-// import NestedLayout from '../components/nested-layout'
-// import type { NextPageWithLayout } from './_app'
+// function makeGridItem(item: String) {
+//   return (
+//     <div className={styles.gridItem}>
+//       <PartScanner />
+//     </div>    
+//   )
+// }
 
-// const inter = Inter({ subsets: ['latin'] })
-
-export default function Home() {
+function makeGridItem(item: ReactNode) {
   return (
-      <>
-        <div>
-          Side Bar
-        </div>
-      </>
+    <div className={styles.gridItem}>
+      {item}
+    </div>    
   )
 }
 
-// Home.getLayout = function getLayout(page: ReactElement) {
-//   return (
-//     <Layout>
-//       <NestedLayout>{page}</NestedLayout>
-//     </Layout>
-//   )
-// }
+export default function Home() {
+  // let partScanNode: ReactNode = <PartScanner />;
+  // let mainWindow = document.querySelector(".main");
+  // let classes = 'main ' + styles.mainFlex;
+  let partScan = makeGridItem(<PartScanner />);
+  return (
+        <div className={'main ' + styles.mainFlex}>
+          <div id={styles.appGrid}>
+            {partScan}
+            <div className={styles.gridItem}>Blog</div>
+            <div className={styles.gridItem}>About me</div>
+          </div>
+        </div>
+  )
+}

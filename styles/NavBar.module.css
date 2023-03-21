@@ -1,0 +1,16 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    /* justify-content: space-between; */
+    align-items: flex-start;
+    background-color: blueviolet;
+    width: 100%;
+}
+.navbaritem {
+    width: 15%;
+    /* flex-grow: .5; */
+    /* border: 3px solid rgba(0, 0, 0, 0.8); */
+    /* background-color: skyblue; */
+    /* flex-basis: 25%; */
+}

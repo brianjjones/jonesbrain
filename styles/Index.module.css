@@ -1,0 +1,23 @@
+#appGrid {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    background-color: brown;
+    align-items: stretch;
+    height: 80%;
+    width: 90%;
+}
+
+.gridItem {
+    display: flex;
+    flex-grow: 1;
+    height: 50%;
+    border-radius: 25px;
+    background-color: red;
+}
+
+.mainFlex {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
