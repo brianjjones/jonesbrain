@@ -1,66 +1,43 @@
 import styles from '@/styles/Home.module.css'
+import { Tab } from '@headlessui/react'
 import { Menu } from '@headlessui/react'
 
 
 export default function Blog() {
     return (
-      <Menu>
-      <Menu.Button>
-      {({ open }) => (
-        <div> {open ? "OPEN" : "CLOSED"} </div>
-      )}
-      </Menu.Button>
-      <Menu.Items>
-        <Menu.Item>
-          {({ active }) => (
-            <div className={active ? styles.bgBlue : ''}>
-            <a
-              href="/blog"
-            >
-              Home
-            </a>
-            </div>
-          )}
-        </Menu.Item>
-        <Menu.Item>
-          <MenuItem itemText="Testing" itemLink='/blog' />
-        </Menu.Item>
-        <Menu.Item>
-          {({ active }) => (
-            <a
-              className={active ? styles.bgBlue : ''}
-              href="/about"
-            >
-              About us
-            </a>
-          )}
-        </Menu.Item>
-        <Menu.Item disabled>
-          <span className={styles.opacity75}>Invite a friend (coming soon!)</span>
-        </Menu.Item>
-      </Menu.Items>
-    </Menu>
+    <Tab.Group vertical>
+      <Tab.List>
+        <Tab>Tab 1</Tab>
+        <Tab>Tab 2</Tab>
+        <Tab>Tab 3</Tab>
+      </Tab.List>
+      <Tab.Panels>
+        <Tab.Panel>Content 1</Tab.Panel>
+        <Tab.Panel>Content 2</Tab.Panel>
+        <Tab.Panel>Content 3</Tab.Panel>
+      </Tab.Panels>
+    </Tab.Group>
+  )
+}
       // <div className={styles.main}>
       //   <div>What I'm up to</div>
       // </div>
-    )
-  }
 
-  interface MenuProps {
-    // itemCss: string;
-    itemText: string;
-    itemLink: string;
-  }
+  // interface MenuProps {
+  //   // itemCss: string;
+  //   itemText: string;
+  //   itemLink: string;
+  // }
 
-  // function MenuItem (props: MenuProps) {
-    function MenuItem({itemText, itemLink}:MenuProps) {
-    return (
-    <div >
-      <a 
-        href={itemLink}
-      >
-        {itemText}
-      </a>
-    </div>
-    )
-  }
+  // // function MenuItem (props: MenuProps) {
+  //   function MenuItem({itemText, itemLink}:MenuProps) {
+  //   return (
+  //   <div >
+  //     <a 
+  //       href={itemLink}
+  //     >
+  //       {itemText}
+  //     </a>
+  //   </div>
+  //   )
+  // }
