@@ -1,17 +1,18 @@
-import Link from 'next/link'
-import JBMenu from './menu';
-import { useRouter } from 'next/router'
-import styles from '@/styles/NavBar.module.css'
+// import Link from 'next/link'
+import JBMenu from './dropdown';
+// import { useRouter } from 'next/router'
+// import styles from '@/styles/NavBar.module.css'
 
 export default function NavBar() {
-  const router = useRouter();
+  // const router = useRouter();
 
     return (
-      
-      <div className={styles.navbar}> 
+      <>
+      <div className='flex bg-black'> 
         <JBMenu />
-        <div>NAME OF CURRENT APP</div>
+        <div className='flex-1 text-white text-center'>NAME OF CURRENT APP</div>
       </div>
+      </>
     )
   }
 

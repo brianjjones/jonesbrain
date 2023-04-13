@@ -38,3 +38,7 @@ html, body, #__next {
   flex-grow: 1;
   background-color: aqua;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

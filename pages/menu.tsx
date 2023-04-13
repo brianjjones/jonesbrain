@@ -9,7 +9,7 @@ const links = [
     { href: '/partscanner', label: 'Part Scanner' },
 ]
 
-export default function JBMenu() {
+export default function MyMenu() {
     return (
         <Menu>
             <Menu.Button>
