@@ -1,4 +1,4 @@
-#appGrid {
+/* #appGrid {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
@@ -20,4 +20,37 @@
     display: flex; 
     align-items: center;
     justify-content: center;
+} */
+
+.grade {
+    /* background-image: linear-gradient(transparent 85%, rgba(0, 0, 0, 0.7)); */
+    /* text-shadow: 52px 52px 1px rgba(0, 0, 0, 0.3); */
+    box-shadow: 10px 11px 3px -2px #333;
+
+}
+
+.graded {
+    /* background: rgb(2,0,36); */
+background: linear-gradient(0deg, rgba(2,0,36,.9) 20%, rgba(115,111,194,.5) 23%, rgba(9,9,121,.5) 48%, rgba(0,212,255,.51) 100%);
+}
+.fancy {
+    font-size: 200px;
+    color: purple;
+    background-color: brown;
+}
+
+.cutout {
+    font-size: 250px;
+    
+        @supports (background-clip: text) or (-webkit-background-clip: text) {
+          background-image: 
+          /* url("https://thumbs.dreamstime.com/z/hole-circuit-board-assembly-closeup-electronic-components-soldered-to-printed-154647323.jpg"); */
+            url("data:image/svg+xml,%3Csvg width='2250' height='900' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cpath fill='%2300A080' d='M0 0h2255v899H0z'/%3E%3Ccircle cx='366' cy='207' r='366' fill='%2300FDCF'/%3E%3Ccircle cx='1777.5' cy='318.5' r='477.5' fill='%2300FDCF'/%3E%3Ccircle cx='1249' cy='737' r='366' fill='%23008060'/%3E%3C/g%3E%3C/svg%3E%0A");
+          background-size: 110% auto;
+          background-position: center;
+          color: transparent;
+          outline: Black;
+          -webkit-background-clip: text;
+          background-clip: text;
+        }
 }
